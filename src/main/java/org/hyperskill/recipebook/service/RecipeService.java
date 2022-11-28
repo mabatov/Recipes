@@ -11,8 +11,4 @@ public interface RecipeService {
     ResponseEntity<?> deleteRecipeById(UserDetailsImpl user, Long id);
 
     ResponseEntity<?> updateRecipe(UserDetailsImpl user, Long id, Recipe recipe);
-
-//    ResponseEntity<?> searchRecipeByName(String name);
-//
-//    ResponseEntity<?> searchRecipeByCategory(String category);
 }

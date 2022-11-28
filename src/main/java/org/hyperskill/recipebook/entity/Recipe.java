@@ -57,5 +57,4 @@ public class Recipe {
     void createOrUpdateDate() {
         this.date = LocalDateTime.now();
     }
-
 }

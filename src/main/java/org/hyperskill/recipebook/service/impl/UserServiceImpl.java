@@ -24,7 +24,6 @@ public class UserServiceImpl implements UserService {
     @Override
     public void save(User user) {
         if (userRepo.findByEmailIgnoreCase(user.getEmail()).isEmpty()) {
-            //user.setEmail(user.getEmail());
             user.setPassword(encoder.encode(user.getPassword()));
             user.setRole("ROLE_USER");
             userRepo.save(user);

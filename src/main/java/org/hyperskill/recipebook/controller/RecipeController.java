@@ -1,7 +1,6 @@
 package org.hyperskill.recipebook.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
@@ -10,7 +9,6 @@ import org.springframework.web.bind.annotation.*;
 import org.hyperskill.recipebook.repository.RecipeRepository;
 import org.hyperskill.recipebook.dto.ReturnId;
 import org.hyperskill.recipebook.entity.Recipe;
-import org.hyperskill.recipebook.exception.RecipeNotFoundException;
 import org.hyperskill.recipebook.exception.RequestParamException;
 import org.hyperskill.recipebook.service.impl.RecipeServiceImpl;
 import org.hyperskill.recipebook.service.impl.UserDetailsImpl;

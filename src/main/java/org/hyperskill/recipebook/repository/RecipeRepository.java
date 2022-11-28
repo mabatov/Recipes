@@ -2,10 +2,8 @@ package org.hyperskill.recipebook.repository;
 
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
-import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Repository;
 import org.hyperskill.recipebook.entity.Recipe;
-import org.hyperskill.recipebook.service.impl.UserDetailsImpl;
 
 import javax.transaction.Transactional;
 import java.util.List;

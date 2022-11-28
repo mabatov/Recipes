@@ -11,8 +11,6 @@ import org.hyperskill.recipebook.entity.Recipe;
 import org.hyperskill.recipebook.exception.RecipeNotFoundException;
 import org.hyperskill.recipebook.service.RecipeService;
 
-import java.time.LocalDateTime;
-
 @Service
 public class RecipeServiceImpl implements RecipeService {
 
