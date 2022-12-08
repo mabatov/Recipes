@@ -21,7 +21,6 @@ import java.util.Map;
 public class RecipeController {
 
     private final RecipeRepository recipeRepository;
-
     private final RecipeServiceImpl recipeService;
 
     @Autowired
@@ -29,7 +28,6 @@ public class RecipeController {
         this.recipeRepository = recipeRepository;
         this.recipeService = recipeService;
     }
-
 
     @PostMapping("/api/recipe/new")
     public ReturnId postRecipe(@AuthenticationPrincipal UserDetailsImpl user,
@@ -60,8 +58,6 @@ public class RecipeController {
         } else {
             throw new RequestParamException("Incorrect parameter provided");
         }
-
-
         return recipeList;
     }
 
@@ -78,10 +74,8 @@ public class RecipeController {
         return recipeService.deleteRecipeById(user, id);
     }
 
-
     public String getLoggedInUser() {
         Authentication auth = SecurityContextHolder.getContext().getAuthentication();
         return auth.getPrincipal().toString();
     }
-
 }

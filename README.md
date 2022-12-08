@@ -21,3 +21,31 @@ Retrieve recipes by their category/name and update them if you need to.
 **Stage 5/5: More chefs to table**
 
 Improve the service to support registration and multiple users.
+
+**Docker configuration:**
+
+Add Dockerfile:
+```
+FROM eclipse-temurin:17-jdk-alpine
+VOLUME /tmp
+ARG JAR_FILE
+COPY ${JAR_FILE} recipebook.jar
+ENTRYPOINT ["java","-jar","/recipebook.jar"]
+```
+Pass in the ```JAR_FILE``` as part of the docker command (for Gradle):
+```
+docker build --build-arg JAR_FILE=build/libs/*.jar -t org.hyperskill/recipebook .
+```
+Then remove ```ARG``` and hardcode the JAR location:
+```
+FROM eclipse-temurin:17-jdk-alpine
+VOLUME /tmp
+COPY build/libs/*.jar recipebook.jar
+ENTRYPOINT ["java","-jar","/recipebook.jar"]
+```
+Build an image and run it:
+```
+docker build -t org.hyperskill/recipebook .
+
+docker run -p 8881:8881 --name recipebook org.hyperskill/recipebook
+```
