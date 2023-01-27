@@ -49,3 +49,9 @@ docker build -t org.hyperskill/recipebook .
 
 docker run -p 8881:8881 --name recipebook org.hyperskill/recipebook
 ```
+
+What to improve:
+1) Switch to PostgresDB
+2) Configure Liquibase
+3) Add tests
+4) Add message broker
